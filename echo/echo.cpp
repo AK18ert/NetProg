@@ -82,7 +82,6 @@ int main(int argc, char** argv){
             if(rc < 0) {
                 throw std::system_error(errno, std::generic_category(), "Ошибка получения данных");
             } else if(rc == 0) {
-               // logMessage("Соединение закрыто клиентом.", logFilePath);
                 close(new_sock);
                 return 0;
             }
